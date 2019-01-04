@@ -10,14 +10,36 @@
 
  // ++ YOUR CODE HERE
 
-function where(arrayObjects, object) {
-  newArray = [];
-  objectProperties = arrayObjects[0]Object
-  for (var i = 0; i < arrayObjects.length; i++) {
+// function where(arrayObjects, object) {
+//   newArray = [];
+//   objectProperties = arrayObjects[0]Object
+//   for (var i = 0; i < arrayObjects.length; i++) {
+//
+//   }
+//   return newArray
+// }
 
+function where(listOfObjects, objProperty) {
+  var newListOfObjects = [];
+
+  for (var i = 0; i < listOfObjects.length; i++) {
+
+    var objInListOfObjects = listOfObjects[i];
+
+    var found = true;
+
+    for(key in objProperty){
+      if (objProperty[key] !== objInListOfObjects[key]) {
+        found = false;
+      }
+    }
+    if (found === true) {
+      newListOfObjects.push(objInListOfObjects);
+    }
   }
-  return newArray
+  return newListOfObjects
 }
+
 
 
 

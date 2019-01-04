@@ -9,18 +9,42 @@
 
  // ++ YOUR CODE HERE
 
+ // function toCamelCase(string) {
+ //
+ //   //convertir el string en lista para separar las palabras
+ //   var newString = string.split(" ");
+ //   var newArray = [];
+ //
+ //   //iterar la lista de palabras
+ //   for(var i = 1; i < newString.length; i++) {
+ //     if()
+ //      var letter = newString[i][0];
+ //      newArray.push(letter.toUpperCase());
+ //   }
+ //   return newArray.join("");
+ // }
+
  function toCamelCase(string) {
 
    //convertir el string en lista para separar las palabras
    var newString = string.split(" ");
-
+   var newArray = [];
 
    //iterar la lista de palabras
    for(var i = 1; i < newString.length; i++) {
-      newString[i][0].toUpperCase();
+      newString[i] = newString[i].toLowerCase();
+      newString[i] = newString[i].replace(newString[i], newString[i][0].toUpperCase() + newString[i].slice(1))
    }
    return newString.join("");
  }
+
+//formar array de palbras en String
+//iterar sobre el array
+// cada palabra convertirla en minúscula
+//reemplazar primera letra de la palabra por mayúscula
+
+
+
 
 
 
